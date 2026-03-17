@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Court Queue System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Food Court Queue System</h1>
+
+<div class="container">
+
+    <!-- Meal Type -->
+    <h3>Select Meal</h3>
+    <select id="meal" onchange="updateMenu()">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+    </select>
+
+    <!-- Veg / Non-Veg -->
+    <h3>Select Type</h3>
+    <select id="type" onchange="updateMenu()">
+        <option value="veg">Veg</option>
+        <option value="nonveg">Non-Veg</option>
+    </select>
+
+    <!-- Food Items -->
+    <h3>Select Food Item</h3>
+    <select id="food"></select>
+
+    <br><br>
+
+    <button onclick="generateToken()">Confirm Order</button>
+
+    <h2 id="token"></h2>
+    <h3 id="status"></h3>
+
+</div>
+
+<!-- Display Screen -->
+<div class="display">
+    <h2>🍽 Live Food Menu</h2>
+    <ul id="menuDisplay"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
